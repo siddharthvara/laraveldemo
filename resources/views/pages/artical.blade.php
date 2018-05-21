@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,12 @@
 </head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 <body>
-<div class="container">
+<div class="container"> -->
+
+@extends('layouts.app')
+
+@section('content')
+
     <table class="table">
         <tr>
             <td>Title</td>
@@ -21,6 +26,10 @@
         </tr>
         @endforeach
     </table>
+    
+@endsection
+    <!--
     </div>
 </body>
 </html>
+-->

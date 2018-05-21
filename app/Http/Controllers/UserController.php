@@ -5,6 +5,7 @@ use App;
 use App\Artical;
 use App\User;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\formRequest;
 
 class UserController extends Controller
 {
@@ -35,5 +36,11 @@ class UserController extends Controller
     {
         $flights = Artical::findOrFail($id);
         return view('pages.show',compact("flights"));
+    }
+
+    public function setArtical(formRequest $request)
+    {
+        # code...
+        info('testing');
     }
 }

@@ -26,7 +26,7 @@ Route::get('hello', function () {
 Route::get('Contact', 'UserController@contact');
 Route::get('Artical', 'UserController@getArtical');
 Route::get('Artical/{id}', 'UserController@showArtical');
-
+Route::post('Artical', 'UserController@setArtical');
 
 
 
