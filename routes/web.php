@@ -29,3 +29,7 @@ Route::get('Artical/{id}', 'UserController@showArtical');
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
