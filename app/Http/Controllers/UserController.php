@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 use App;
 use App\Artical;
 use App\User;
+use Input;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\formRequest;
+use App\Http\Requests\formValidate;
 
 class UserController extends Controller
 {
@@ -38,9 +39,15 @@ class UserController extends Controller
         return view('pages.show',compact("flights"));
     }
 
-    public function setArtical(formRequest $request)
+    //public function setArtical(formValidate $request)
+    public function setArtical()
     {
         # code...
-        info('testing');
+        info('testing'.print_r(Input::all(),true));
+        return "yesssss".Input::get('title');
+    }
+
+    public function storeArtical(){
+        return view('pages.add');
     }
 }
