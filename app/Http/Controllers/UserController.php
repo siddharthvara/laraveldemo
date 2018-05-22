@@ -44,7 +44,12 @@ class UserController extends Controller
     {
         # code...
         info('testing'.print_r(Input::all(),true));
-        return "yesssss".Input::get('title');
+        $flight = new Artical;
+        $flight->title = Input::get('title');
+        $flight->body = Input::get('body');
+        $flight->save();
+
+        return redirect('Artical');
     }
 
     public function storeArtical(){
