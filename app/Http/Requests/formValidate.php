@@ -13,7 +13,7 @@ class formValidate extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,6 +25,9 @@ class formValidate extends FormRequest
     {
         return [
             //
+            'title' => 'required|max:255',
+            'body' => 'required',
+
         ];
     }
 }

@@ -41,7 +41,7 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
+                        <!-- Authentication Links 
                         @if (Auth::guest())
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
@@ -66,6 +66,8 @@
                                 </ul>
                             </li>
                         @endif
+                        -->
+                        <li><a href="Artical/add">Add</a></li>
                     </ul>
                 </div>
             </div>

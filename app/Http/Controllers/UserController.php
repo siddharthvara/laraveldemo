@@ -39,11 +39,14 @@ class UserController extends Controller
         return view('pages.show',compact("flights"));
     }
 
-    //public function setArtical(formValidate $request)
-    public function setArtical()
+    public function setArtical(formValidate $request)
+    //public function setArtical()
     {
         # code...
         info('testing'.print_r(Input::all(),true));
+
+        
+
         $flight = new Artical;
         $flight->title = Input::get('title');
         $flight->body = Input::get('body');
@@ -54,5 +57,14 @@ class UserController extends Controller
 
     public function storeArtical(){
         return view('pages.add');
+    }
+
+    public function deleteArtical($id){
+
+        $flight = App\Artical::find($id);
+        $flight->delete();
+
+        return redirect('Artical');
+
     }
 }
