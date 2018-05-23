@@ -18,15 +18,14 @@
         <input name="_token" type="hidden" value="{{ csrf_token() }}"/>  
         <div class="form-group">
             <label for="title">Title:</label>
-            <input type="text" class="form" name="title">
+            <input type="text" class="form-control" name="title">
         </div>
         <div class="form-group">
             <label for="body">Body:</label>
-            <input type="textarea" class="form" name="body">
+            <!-- <input type="textarea" class="form" name="body"> -->
+            <textarea class="form-control" rows="5"  name="body"></textarea>
         </div> 
         <button type="submit" class="btn btn-default">Submit</button>
    </form>
-    
-  
     
 @endsection
