@@ -19,16 +19,17 @@
             <td>Title</td>
             <td>Discription</td>
             <td></td>
+            <td></td>
         </tr>
         @foreach ($flights as $artical)
         <tr>
             <td><a href="Artical/{{$artical->id}}">{{ $artical->title }}</a></td>
             <td>{{ $artical->body }}</td>
             <td><a href="Artical/delete/{{$artical->id}}">Delete</a></td>
+            <td><a href="Artical/{{$artical->id}}/edit">Edit</a></td>
         </tr>
         @endforeach
     </table>
-    
 @endsection
     <!--
     </div>

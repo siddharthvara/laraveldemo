@@ -25,7 +25,7 @@ class formValidate extends FormRequest
     {
         return [
             //
-            'title' => 'required|max:255',
+            'title' => 'required|min:3|max:255',
             'body' => 'required',
 
         ];

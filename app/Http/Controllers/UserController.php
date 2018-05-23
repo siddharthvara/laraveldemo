@@ -7,6 +7,7 @@ use App\User;
 use Input;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\formValidate;
+use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
@@ -56,7 +57,9 @@ class UserController extends Controller
     }
 
     public function storeArtical(){
-        return view('pages.add');
+        
+            return view('pages.add');
+        
     }
 
     public function deleteArtical($id){
@@ -67,4 +70,18 @@ class UserController extends Controller
         return redirect('Artical');
 
     }
+
+    public function editArtical($id){
+
+        $flights = Artical::findOrFail($id);
+        return view('pages.edit',compact("flights"));
+    }
+
+    public function updateArtical($id , formValidate $request){
+        $flights = Artical::findOrFail($id);
+        $flights->update($request->all());
+        
+        return redirect('Artical');
+
+    } 
 }

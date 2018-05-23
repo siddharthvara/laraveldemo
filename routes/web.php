@@ -28,7 +28,10 @@ Route::get('Artical', 'UserController@getArtical');
 Route::get('Artical/add', 'UserController@storeArtical');
 Route::get('Artical/delete/{id}', 'UserController@deleteArtical');
 Route::get('Artical/{id}', 'UserController@showArtical');
+Route::get('Artical/{id}/edit', 'UserController@editArtical');
 Route::post('Artical', 'UserController@setArtical');
+Route::post('Artical/{id}', 'UserController@updateArtical');
+
 
 
 

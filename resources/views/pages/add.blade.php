@@ -27,5 +27,19 @@
         </div> 
         <button type="submit" class="btn btn-default">Submit</button>
    </form>
+
+   </br>
+
+   <!-- {{ var_dump($errors) }} -->
+
+    @if ( $errors->any() )
+
+        <ul class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+
+    @endif
     
 @endsection
