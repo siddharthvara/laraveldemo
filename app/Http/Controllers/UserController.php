@@ -84,4 +84,19 @@ class UserController extends Controller
         return redirect('Artical');
 
     } 
+
+    public function searchArtical(){
+        
+        if(!empty($_REQUEST['val'])){
+            $sort = $_REQUEST['val'];
+            $flights = Artical::orderBy('title', $sort)->get();
+            return view('pages.artical',compact("flights"));
+
+        }else{
+
+            $flights = Artical::Where('title', 'like', '%' . Input::get('title') . '%')->orWhere('body', 'like', '%' . Input::get('title') . '%')->get();
+            return view('pages.artical',compact("flights"));
+        }
+        
+    }
 }
